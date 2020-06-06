@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "splashconcrete",
-	"version": "1.0.0",
+	"version": "${version}",
 	"name": "Splash Concrete",
 	"description": "Allows hardening concrete powder using splash water bottles.",
 	"authors": [
