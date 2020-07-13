@@ -8,16 +8,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ConcretePowderBlock;
-import net.minecraft.entity.thrown.ThrownPotionEntity;
+import net.minecraft.entity.projectile.thrown.PotionEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
-@Mixin(ThrownPotionEntity.class)
-class ThrownPotionEntityMixin {
+@Mixin(PotionEntity.class)
+class PotionEntityMixin {
 	@Inject(method = "extinguishFire", at = @At("TAIL"))
 	public void hardenSplashedConcrete(BlockPos pos, Direction direction, CallbackInfo ci) {
-		World world = ((ThrownPotionEntity) (Object) this).world;
+		World world = ((PotionEntity) (Object) this).world;
 
 		BlockState blockState = world.getBlockState(pos);
 		Block block = blockState.getBlock();

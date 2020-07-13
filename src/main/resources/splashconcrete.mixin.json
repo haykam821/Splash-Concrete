@@ -3,7 +3,7 @@
 	"package": "io.github.haykam821.splashconcrete.mixin",
 	"compatibilityLevel": "JAVA_8",
 	"mixins": [
-		"ThrownPotionEntityMixin"
+		"PotionEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
